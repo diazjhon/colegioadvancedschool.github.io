@@ -1,0 +1,771 @@
+/* Estilos generales */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FFFFFF; /* Fondo blanco en modo claro */
+    color: #0c1d5f; /* Texto azul en modo claro */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+    background-color: #000000; /* Fondo azul oscuro en modo oscuro */
+    color: #F0F0F0; /* Texto blanco en modo oscuro */
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #0e2066; /* Azul en modo claro */
+    color: #FFFFFF;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode header {
+    background-color: #1c1d1f; /* Azul más oscuro en modo oscuro */
+}
+
+.logo img {
+    width: 80px; /* Logo pequeño */
+}
+
+
+/* Estilos generales del menú */
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: flex-end; /* Menú más centrado pero a la derecha */
+    flex: 1;
+    margin-right: 20px; /* Ajuste para centrar más */
+}
+
+nav ul li {
+    margin: 0 15px;
+    position: relative;
+}
+
+nav ul li a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Estilos para el submenú desplegable */
+.dropdown .submenu {
+    display: none;
+    position: absolute;
+    background-color: #e2c106; /* Azul en modo claro */
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+body.dark-mode .dropdown .submenu {
+    background-color: #565758; /* Azul más oscuro en modo oscuro */
+}
+
+.dropdown:hover .submenu {
+    display: block;
+}
+
+/* Estilos para el menú en móviles */
+.menu-toggle {
+    display: none; /* Oculto por defecto */
+    font-size: 1.5rem;
+    color: #FFFFFF;
+    cursor: pointer;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+/* Estilos para el menú en móviles */
+.menu-toggle {
+    display: none; /* Oculto por defecto */
+    font-size: 1.5rem;
+    color: #FFFFFF;
+    cursor: pointer;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+/* Estilos para el menú en móviles */
+.menu-toggle {
+    display: none; /* Oculto por defecto */
+    font-size: 1.5rem;
+    color: #FFFFFF;
+    cursor: pointer;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+/* Estilos para el menú en móviles */
+.menu-toggle {
+    display: none; /* Oculto por defecto */
+    font-size: 1.5rem;
+    color: #FFFFFF;
+    cursor: pointer;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+/* Estilos para móviles */
+@media (max-width: 768px) {
+    header {
+        display: flex;
+        justify-content: space-between; /* Separar el logo y el botón de hamburguesa */
+        align-items: center; /* Centrar verticalmente */
+        padding: 20px;
+    }
+
+    .menu-toggle {
+        display: block; /* Mostrar el botón de hamburguesa */
+        position: relative; /* Cambiar a posición relativa */
+        margin-left: auto; /* Alinear a la derecha */
+        margin-right: 10cm; /* Mover 5 cm a la izquierda desde el borde derecho */
+        transform: translateY(-10px); /* Mover un poco hacia arriba */
+    }
+
+    nav ul {
+        display: none; /* Ocultar el menú en móviles */
+        flex-direction: column;
+        background-color: #224bf0; /* Azul en modo claro */
+        position: absolute;
+        top: 60px; /* Ajusta esta posición según la altura de tu header */
+        left: 0; /* Alinear a la izquierda */
+        right: 0; /* Alinear a la derecha */
+        width: 100%; /* Ocupar todo el ancho */
+        border-radius: 0; /* Sin bordes redondeados */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        max-height: 80vh; /* Altura máxima del menú */
+        overflow-y: auto; /* Permitir desplazamiento vertical */
+    }
+
+    body.dark-mode nav ul {
+        background-color: #040d27; /* Azul más oscuro en modo oscuro */
+    }
+
+    nav ul.active {
+        display: flex; /* Mostrar el menú cuando está activo */
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .dropdown .submenu {
+        position: static; /* Submenú en columna */
+        background-color: rgba(255, 255, 255, 0.1); /* Fondo semitransparente */
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    body.dark-mode .dropdown .submenu {
+        background-color: rgba(0, 0, 0, 0.2); /* Fondo oscuro semitransparente */
+    }
+}
+
+/* Botón de modo oscuro */
+#dark-mode-toggle {
+    background: rgba(255, 255, 255, 0.2); /* Semitransparente */
+    border: none;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 1.5rem;
+    opacity: 0.7;
+    transition: opacity 0.3s, background 0.3s;
+    padding: 10px;
+    border-radius: 50%;
+    position: fixed;
+    top: 75px; /* Debajo del menú */
+    right: 20px;
+    z-index: 1001;
+}
+
+#dark-mode-toggle:hover {
+    opacity: 1;
+    background: rgba(255, 255, 255, 0.4); /* Menos transparente al pasar el mouse */
+}
+
+/* Botón de volver al inicio */
+#back-to-top {
+    background: #e2c106;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding: 10px;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1001;
+    display: none; /* Oculto por defecto */
+}
+
+#back-to-top:hover {
+    background: #1A2A6B;
+    color: #FFD700;
+}
+
+/* Hero section */
+.hero {
+    background-image: url('imagen3.jpg'); /* Cambia por tu imagen */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #FFFFFF;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    animation: sweep 1.5s ease-out;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    animation: sweep 2s ease-out;
+}
+
+.btn {
+    background-color: #FFD700;
+    color: #1A2A6B;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 5px;
+    animation: sweep 2.5s ease-out;
+}
+
+@keyframes sweep {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Banner publicitario */
+.banner-publicitario {
+    background-color: #0b1c3f; /* Azul en modo claro */
+    padding: 15px;
+    text-align: center;
+    color: #fafafa;
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin: 20px 0;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: background-color 0.3s;
+}
+
+body.dark-mode .banner-publicitario {
+    background-color: #575555; /* Azul más oscuro en modo oscuro */
+    color: #f0f2f8;
+}
+
+.banner-publicitario p {
+    display: inline-block;
+    padding-left: 100%;
+    animation: scroll 15s linear infinite;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+/* Secciones */
+.section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #101a41; /* Azul en modo claro */
+    transition: color 0.3s;
+}
+
+body.dark-mode .section h2 {
+    color: #F0F0F0; /* Blanco en modo oscuro */
+}
+
+
+/* Estilos para la sección de Matrícula 2024 */
+.matricula-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.matricula-texto {
+    width: 50%; /* Texto ocupa la mitad del espacio */
+}
+
+.matricula-texto h2 {
+    font-size: 2.5rem;
+    color: #1A2A6B; /* Azul en modo claro */
+    margin-bottom: 20px;
+    transition: color 0.3s;
+}
+
+body.dark-mode .matricula-texto h2 {
+    color: #F0F0F0; /* Blanco en modo oscuro */
+}
+
+.matricula-texto p {
+    font-size: 1.2rem;
+    color: #1A2A6B; /* Azul en modo claro */
+    line-height: 1.6;
+    transition: color 0.3s;
+}
+
+body.dark-mode .matricula-texto p {
+    color: #F0F0F0; /* Blanco en modo oscuro */
+}
+
+.matricula-contenido-dinamico {
+    width: 45%; /* Contenido dinámico ocupa el 45% del espacio */
+    display: flex;
+    gap: 10px; /* Espacio entre los elementos */
+    flex-wrap: wrap; /* Para el juego de puzzle */
+}
+
+.matricula-contenido-dinamico img,
+.matricula-contenido-dinamico video {
+    width: 48%; /* Cada elemento ocupa casi la mitad del contenedor */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para los botones de estadísticas */
+.estadisticas {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.estadistica {
+    background-color: #f8d304; /* Fondo amarillo en modo claro */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 30%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.3s;
+    cursor: pointer;
+}
+
+.estadistica:hover {
+    transform: scale(1.05); /* Efecto de escala al pasar el mouse */
+}
+
+body.dark-mode .estadistica {
+    background-color: #1c1d1f; /* Fondo oscuro en modo oscuro */
+}
+
+.estadistica h3 {
+    font-size: 2rem;
+    color: #1A2A6B; /* Azul en modo claro */
+    margin-bottom: 10px;
+    transition: color 0.3s;
+}
+
+body.dark-mode .estadistica h3 {
+    color: #F0F0F0; /* Blanco en modo oscuro */
+}
+
+.estadistica p {
+    font-size: 1.2rem;
+    color: #1A2A6B; /* Azul en modo claro */
+    transition: color 0.3s;
+}
+
+body.dark-mode .estadistica p {
+    color: #F0F0F0; /* Blanco en modo oscuro */
+}
+
+/* Estilos para el juego de puzzle */
+#puzzle-game {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas */
+    gap: 10px;
+    width: 100%;
+}
+
+.puzzle-card {
+    width: 100px; /* Puedes ajustar este tamaño */
+    height: 100px; /* Puedes ajustar este tamaño */
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.puzzle-card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+.puzzle-card.flipped .puzzle-card-inner {
+    transform: rotateY(180deg);
+}
+
+.puzzle-card-front,
+.puzzle-card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.puzzle-card-front {
+    background-color: #f8d304; /* Color de fondo frontal */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: #1A2A6B;
+}
+
+.puzzle-card-back {
+    background-color: #1A2A6B;
+    transform: rotateY(180deg);
+    background-size: contain; /* Ajusta la imagen para que se contenga dentro de la tarjeta */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center; /* Centra la imagen */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .matricula-container {
+        flex-direction: column;
+    }
+
+    .matricula-texto {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .matricula-contenido-dinamico {
+        width: 100%;
+        flex-direction: column; /* Elementos en columna en móviles */
+    }
+
+    .matricula-contenido-dinamico img,
+    .matricula-contenido-dinamico video {
+        width: 100%; /* Elementos ocupan todo el ancho en móviles */
+        margin-bottom: 10px;
+    }
+
+    .estadisticas {
+        align-items: center; /* Centrar los cuadros */
+        flex-direction: column;
+    }
+
+    .estadistica {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Estilos para la sección de Descubriendo el Mundo y Primeros Pasos */
+.vision-mision-container {
+    display: flex; /* Usar flexbox para alinear columnas */
+    margin-top: 30px; /* Espacio superior */
+}
+
+.texto-column {
+    width: 50%; /* Columna de texto ocupa la mitad izquierda */
+    padding: 20px; /* Espacio interno */
+    box-sizing: border-box; /* Incluye padding en el ancho total */
+}
+
+.imagen-column {
+    width: 50%; /* Columna de imagen ocupa la mitad derecha */
+    display: flex; /* Usar flexbox para centrar la imagen verticalmente */
+    align-items: center; /* Alinear verticalmente */
+    justify-content: center; /* Centrar horizontalmente */
+}
+
+.imagen-column img {
+    max-width: 1000px; /* Limitar el ancho máximo de la imagen */
+    max-height: 780px; /* Limitar la altura máxima de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+    object-fit: cover; /* Ajusta la imagen sin distorsionar */
+}
+
+.mision, .vision {
+    background-color: #f8d304; /* Color de fondo */
+    padding: 20px; /* Espacio interno */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(1, 2, 66, 0.2); /* Sombra */
+    margin-bottom: 20px; /* Espacio entre Misión y Visión */
+    transition: background-color 0.3s;
+}
+
+body.dark-mode .mision, body.dark-mode .vision {
+    background-color: #1c1d1f; /* Azul más oscuro en modo oscuro */
+}
+
+.mision h3, .vision h3 {
+    font-size: 2rem; /* Tamaño de fuente para los encabezados */
+    color: #1A2A6B; /* Color del texto */
+    margin-bottom: 10px; /* Espacio inferior */
+    transition: color 0.3s;
+}
+
+body.dark-mode .mision h3, body.dark-mode .vision h3 {
+    color: #F0F0F0; /* Blanco en modo oscuro */
+}
+
+.mision p, .vision p {
+    font-size: 1.2rem; /* Tamaño de fuente para los párrafos */
+    color: #1A2A6B; /* Color del texto */
+    line-height: 1.6; /* Altura de línea */
+    transition: color 0.3s;
+}
+
+body.dark-mode .mision p, body.dark-mode .vision p {
+    color: #F0F0F0; /* Blanco en modo oscuro */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .vision-mision-container {
+        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+    }
+
+    .texto-column, .imagen-column {
+        width: 100%; /* Ambas columnas ocupan el 100% del ancho */
+    }
+
+    .imagen-column img {
+        max-width: 100%; /* Ajuste para móviles */
+        max-height: 700px; /* Limitar la altura máxima en móviles */
+        height: auto; /* Mantiene la proporción de la imagen */
+    }
+}
+/* Estilos para la sección de Instalaciones */
+.section {
+    padding: 20px;
+}
+
+.niveles {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.nivel {
+    flex: 1; /* Cada cuadro ocupa el mismo espacio */
+    margin: 10px; /* Espacio entre cuadros */
+    padding: 20px; /* Espacio interno */
+    background-color: #f8d304; /* Color de fondo */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el cuadro */
+    transition: transform 0.2s, background-color 0.3s; /* Transición suave */
+    text-align: center; /* Centrar el texto dentro del cuadro */
+    display: flex; /* Usar flexbox para centrar contenido */
+    flex-direction: column; /* Alinear en columna */
+    justify-content: center; /* Centrar verticalmente */
+    height: 100%; /* Asegura que el cuadro ocupe toda la altura disponible */
+}
+
+body.dark-mode .nivel {
+    background-color: #1c1d1f; /* Azul más oscuro en modo oscuro */
+}
+
+.nivel:hover {
+    transform: scale(1.05); /* Efecto de aumento al pasar el mouse */
+}
+
+.programa-detalle {
+    display: flex; /* Usar flexbox para alinear texto e imagen */
+    margin-top: 20px;
+}
+
+.detalle-texto {
+    color: #ffffff; 
+    flex: 1; /* Ocupa la mitad izquierda */
+    padding: 20px; /* Espacio interno */
+    text-align: center; /* Centrar el texto */
+    display: flex; /* Usar flexbox para centrar contenido */
+    flex-direction: column; /* Alinear en columna */
+    justify-content: center; /* Centrar verticalmente */
+    background-color: #110f5c; /* Fondo blanco con opacidad */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 2px 4px rgba(232, 232, 235, 0.1); /* Sombra sutil */
+}
+
+/* Estilos para el modo oscuro */
+body.dark-mode .detalle-texto {
+    background-color: #2c2c2e; /* Fondo oscuro en modo oscuro */
+    color: #ffffff; /* Color de texto blanco en modo oscuro */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada en modo oscuro */
+}
+
+.detalle-imagen {
+    flex: 1; /* Ocupa la mitad derecha */
+    display: flex; /* Usar flexbox para centrar la imagen */
+    align-items: center; /* Alinear verticalmente */
+    justify-content: center; /* Centrar horizontalmente */
+}
+
+.detalle-imagen img {
+    max-width: 70%; /* Limitar el ancho máximo de la imagen */
+    max-height: 550px; /* Limitar la altura máxima de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .niveles {
+        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+    }
+
+    .nivel {
+        margin: 10px 0; /* Espacio vertical entre cuadros */
+    }
+
+    .programa-detalle {
+        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+    }
+
+    .detalle-texto, .detalle-imagen {
+        width: 93%; /* Ambas secciones ocupan el 100% del ancho */
+    }
+
+    .detalle-imagen img {
+        max-width: 100%; /* Ajustar el ancho de la imagen en móviles */
+    }
+}
+/* Sección de Video */
+#video-seccion {
+    text-align: center; /* Centrar el texto */
+    background-color: #e2c106; /* Fondo en modo claro */
+    color: #000000;
+}
+
+#video-thumbnail {
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+#play-button {
+    display: block; /* Mostrar el botón */
+    z-index: 10; /* Asegurarse de que el botón esté por encima del video */
+}
+
+/* Estilos para el modo oscuro */
+body.dark-mode #video-seccion {
+    background-color: #1a1a1a; /* Fondo en modo oscuro */
+    color: #FFFFFF; /* Color de texto en modo oscuro */
+}
+
+body.dark-mode #play-button {
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo del botón en modo oscuro */
+    color: #FFFFFF; /* Color del texto del botón en modo oscuro */
+}
+
+
+/* Estilos para el footer responsive */
+footer {
+    background-color: #0e2066; /* Color de fondo en modo claro */
+    color: #FFFFFF; /* Color de texto en modo claro */
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Permitir que las columnas se apilen en móviles */
+}
+
+.footer-column {
+    flex: 1;
+    padding: 10px;
+    min-width: 200px; /* Ancho mínimo para evitar que las columnas sean demasiado estrechas */
+}
+
+.footer-column h2 {
+    margin-top: 0;
+}
+
+.footer-column p {
+    margin: 5px 0;
+}
+
+/* Estilos para el modo oscuro */
+body.dark-mode footer {
+    background-color: #1a1a1a; /* Color de fondo en modo oscuro */
+    color: #FFFFFF; /* Color de texto en modo oscuro */
+}
+
+body.dark-mode .footer-column {
+    color: #FFFFFF; /* Asegurarse de que el texto en las columnas sea blanco en modo oscuro */
+}
+
+/* Estilos para móviles */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column; /* Apilar columnas verticalmente */
+    }
+
+    .footer-column {
+        margin-bottom: 20px; /* Espacio entre columnas */
+    }
+}

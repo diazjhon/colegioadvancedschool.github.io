@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced School Perú</title>
+    <link rel="stylesheet" href="styles_inicial.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.jpg" alt="Advanced School Perú">
+        </div>
+        <div class="menu-toggle" id="mobile-menu">
+            <i class="fas fa-bars"></i> <!-- Icono de hamburguesa -->
+        </div>
+        <nav>
+            <ul id="nav-menu">
+                <li><a href="index.html" data-level="index.html">Principal</a></li>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#descubriendo-primeros-pasos">Nosotros</a></li>
+                <li class="dropdown">
+                    <a href="#programas">Programas <i class="fas fa-chevron-down"></i></a>
+                    <ul class="submenu">
+                        
+                        <li><a href="primaria.html" data-level="primaria.html">Primaria</a></li>
+                        <li><a href="secundaria.html" data-level="secundaria.html">Secundaria</a></li>
+                    </ul>
+                </li>
+                <li><a href="#foooter">Contacto</a></li>
+            </ul>
+        </nav>
+        <!-- Botón de modo oscuro -->
+        <button id="dark-mode-toggle"><i class="fas fa-moon"></i></button>
+    </header>
+
+    <!-- Botón de volver al inicio -->
+    <button id="back-to-top"><i class="fas fa-arrow-up"></i></button>
+
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>🌈 ¡Bienvenidos al Nivel Inicial de Advanced School Peru!</h1>
+            <p>El nivel Inicial es el comienzo de una maravillosa aventura hacia el aprendizaje. Creemos que cada niño es un universo de curiosidad y creatividad, por eso creamos un ambiente seguro, lleno de color, amor y estímulos positivos.</p>
+            <a href="https://wa.me/976225084?text=Hola,%20estoy%20interesado%20en%20matricularme%20en%20Advanced%20School%20Peru." class="btn">Comunicate Ahora Click Aqui</a>
+        </div>
+    </section>
+    
+
+    <!-- Div controlar los botones -->
+
+    <div id="fotos-section"></div>
+    <div id="videos-section"></div>
+    <div id="puzzle-section"></div>
+
+  <!-- Banner publicitario 1 -->
+    <div class="banner-publicitario">
+        <p>¡Inscríbete ya y forma parte de nuestra gran familia educativa!</p>
+    </div>
+
+  
+<!-- Sección de Matrícula 2024 -->
+
+<section id="matricula" class="section">
+    <div class="matricula-container">
+        <!-- Texto a la izquierda -->
+        <div class="matricula-texto">
+            <h2 id="dynamic-title">Matrícula 2024</h2>
+            <p id="dynamic-text">En <strong>Advanced School Perú</strong> abrimos el plazo de matrícula para el año académico 2024.</p>
+        </div>
+        <!-- Contenedor dinámico para imágenes, videos o el juego de puzzle -->
+        <div class="matricula-contenido-dinamico" id="dynamic-content">
+            <!-- Contenido inicial: Videos -->
+            <video controls>
+                <source src="videos/video1.mp4" type="video/mp4">
+                Tu navegador no soporta el elemento de video.
+            </video>
+            <video controls>
+                <source src="videos/video1.mp4" type="video/mp4">
+                Tu navegador no soporta el elemento de video.
+            </video>
+        </div>
+    </div>
+    <!-- Cuadros de estadísticas -->
+    <div class="estadisticas">
+        <div class="estadistica" id="fotos">
+            <h3>Fotos</h3>
+            <p>De Experiencia</p>
+        </div>
+        <div class="estadistica" id="videos">
+            <h3>Videos</h3>
+            <p>A partir de</p>
+        </div>
+        <div class="estadistica" id="puzzle">
+            <h3>Juego de Puzzle</h3>
+            <p>Aprobados</p>
+        </div>
+    </div>
+</section>
+
+    <!-- Banner publicitario 2 -->
+    <div class="banner-publicitario">
+        <p>¡Conoce nuestras modernas instalaciones y metodologías innovadoras!</p>
+    </div>
+
+   
+<!-- Sección de Descubriendo el Mundo y Primeros Pasos -->
+<section id="descubriendo-primeros-pasos" class="section">
+    <h2>Descubriendo el Mundo y Primeros Pasos</h2>
+    <div class="vision-mision-container">
+        <!-- Columna de texto -->
+        <div class="texto-column">
+            <div class="mision">
+                <h3>🌟 Descubriendo el Mundo a Través del Juego</h3>
+                <p>En Advanced School Peru, el juego no es solo diversión: es la herramienta más poderosa para aprender. A través de actividades lúdicas cuidadosamente diseñadas, los niños exploran su entorno, desarrollan habilidades sociales, fortalecen su lenguaje y despiertan su creatividad. Cada juego es una oportunidad para resolver problemas, imaginar nuevas posibilidades y construir las bases de un pensamiento crítico. Porque jugar es la forma más auténtica de descubrir el mundo que los rodea.</p>
+            </div>
+            <div class="vision">
+                <h3>🌈 Primeros Pasos, Grandes Sueños</h3>
+                <p>El nivel Inicial marca el comienzo de un viaje educativo lleno de curiosidad y asombro. En Advanced School Peru, entendemos que cada pequeño paso cuenta, por eso guiamos a nuestros estudiantes con amor y dedicación, promoviendo su autonomía, reforzando sus valores y cultivando su confianza. Creemos que un niño que sueña es un adulto que transforma el mundo. Por eso, aquí cada experiencia, cada logro y cada sonrisa, forman parte de un futuro brillante que empieza desde ahora.</p>
+            </div>
+        </div>
+        <!-- Columna de imágenes con cambio automático -->
+        <div class="imagen-column">
+            <img id="carrusel-imagen" src="imagen1.jpg" alt="Carrusel de imágenes">
+        </div>
+    </div>
+</section>
+
+
+    <!-- Banner publicitario 3 -->
+    <div class="banner-publicitario">
+        <p>¡Aprovecha nuestras becas y descuentos especiales!</p>
+    </div>
+
+   <!-- Sección de Instalaciones -->
+<div id="desplazamiento"></div><!-- Sección de desplazamiento -->
+<section id="instalaciones" class="section">
+    <h2>⚽🏐 Instalaciones que Inspiran el Crecimiento, el Deporte y la Diversión</h2>
+    <div class="niveles">
+        <div class="nivel" data-level="futbol">
+            <h3>Cancha de Fútbol</h3>
+            <p>Un amplio espacio donde los estudiantes aprenden mucho más que a patear un balón.</p>
+        </div>
+        <div class="nivel" data-level="voley">
+            <h3>Campo de Vóley</h3>
+            <p>Un lugar diseñado para cultivar la coordinación, la agilidad y la comunicación.</p>
+        </div>
+        <div class="nivel" data-level="piscina">
+            <h3>Piscina</h3>
+            <p>Un entorno perfecto para que los niños y jóvenes exploren el mundo acuático con seguridad.</p>
+        </div>
+        <div class="nivel" data-level="juegos">
+            <h3>Área de Juegos para Niños</h3>
+            <p>Un rincón lleno de color y magia, diseñado especialmente para los más pequeños.</p>
+        </div>
+    </div>
+    <div id="instalacion-detalle" class="programa-detalle">
+        <div class="detalle-texto">
+            <h3 id="detalle-titulo">Cancha de Fútbol</h3>
+            <p id="detalle-descripcion">Un amplio espacio donde los estudiantes aprenden mucho más que a patear un balón. Aquí, fortalecen valores como el trabajo en equipo, la perseverancia y el liderazgo, mientras disfrutan de uno de los deportes más apasionantes. Cada partido es una lección de estrategia, compañerismo y sana competencia.</p>
+        </div>
+        <div class="detalle-imagen">
+            <img id="detalle-imagen" src="imagen1.jpg" alt="Imagen de la instalación" />
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Sección de Video -->
+<section id="video-seccion" class="section" style="position: relative; overflow: hidden;">
+    <h2>Video</h2>
+    <p>Disfruta de nuestro contenido en video. Haz clic en el botón para reproducir.</p>
+    <div id="detalle-video-completo" style="position: relative; width: 100%; height: 700px;">
+        <img id="video-thumbnail" src="imagenes/profesores3.jpg" alt="Imagen de video" style="width: 100%; height: 100%; object-fit: cover; display: block; border-radius: 10px;">
+        <button id="play-button" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 24px; padding: 10px 20px; background-color: rgba(240, 240, 240, 0.8); border: none; border-radius: 5px; cursor: pointer; z-index: 10;">
+            ▶ Reproducir
+        </button>
+        <video id="video-tiktok" width="100%" height="100%" style="display: none; position: absolute; top: 0; left: 0; border-radius: 10px;" controls>
+            <source src="videos/video1.mp4" type="video/mp4"> <!-- Cambia la ruta al video -->
+            Tu navegador no soporta el elemento de video.
+        </video>
+    </div>
+</section>
+
+
+
+<footer>
+    <section id="foooter" class="section"></section>
+    <div class="footer-container">
+        <div class="footer-column">
+            <h2>Contacto</h2>
+            <p>Teléfono: 976225084 - 936945735</p>
+            <p>Email: <a href="mailto:info@advancedschool.edu.pe">info@advancedschool.edu.pe</a></p>
+        </div>
+        <div class="footer-column">
+            <h2>Dirección</h2>
+            <p>Jr. Las Palmeras N° 340</p>
+            <p>Andabamba-Pillco Marca</p>
+            <p>Huanuco, Perú</p>
+        </div>
+        <div class="footer-column">
+            <h2>Redes Sociales</h2>
+            <p>Facebook: <a href="https://www.facebook.com/AdvancedSchoolPeru">/AdvancedSchoolPeru</a></p>
+            <p>Twitter: <a href="https://twitter.com/AdvancedSchoolPE">@AdvancedSchoolPE</a></p>
+        </div>
+        <div class="footer-column">
+            <h2>Horario de Atención</h2>
+            <p>Lunes a Viernes: 8:00 AM - 5:00 PM</p>
+            <p>Sábados: 9:00 AM - 1:00 PM</p>
+        </div>
+    </div>
+</footer>
+
+
+
+    <script src="scripts_inicial.js"></script>
+</body>
+</html>
